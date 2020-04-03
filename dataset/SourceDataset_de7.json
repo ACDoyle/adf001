@@ -1,0 +1,31 @@
+{
+	"name": "SourceDataset_de7",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "blob",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "inputEmp.txt",
+				"container": "adfv2tutorial"
+			},
+			"columnDelimiter": "|",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "FirstName"
+			},
+			{
+				"name": "LastName"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
